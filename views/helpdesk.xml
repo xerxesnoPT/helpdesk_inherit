@@ -1,0 +1,12 @@
+<odoo>
+    <record model="ir.ui.view" id="helpdesk_ticket_view_form_inherit">
+        <field name="name">helpdesk form inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_email" position="before">
+                <field name="sale_order_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>
