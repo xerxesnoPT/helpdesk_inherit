@@ -1,0 +1,21 @@
+<odoo>
+    <record model="ir.ui.view" id="crm_case_view_form_inherit">
+        <field name="name">crm case form inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <field name="email_from" position="before">
+                <field name="project_coding"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="ir_sequence_crm_lead_project_coding" model="ir.sequence">
+        <field name='name'>crm lead project coding sequence</field>
+        <field name='code'>project_coding.sequence</field>
+        <field name='prefix'>PPA%(year)s%(month)s%(day)s</field>
+        <field name='padding'>5</field>
+        <field name='company_id' eval="False"/>
+
+    </record>
+</odoo>
