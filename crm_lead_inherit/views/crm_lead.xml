@@ -28,6 +28,20 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="crm_case_kanban_view_leads_inherit">
+            <field name="name">crm.case.kanban.view.leads.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='color']" position="after">
+                    <field name='project_coding'/>
+                </xpath>
+                <xpath expr="//t[@t-name='kanban-box']//field[@name='planned_revenue']" position="after">
+                    <span t-if="record.project_coding.value">,编号：<t t-esc="record.project_coding.raw_value"/></span>
+                </xpath>
+            </field>
+        </record>
+
     <record id="ir_sequence_crm_lead_project_coding" model="ir.sequence">
         <field name="name">crm lead project coding sequence</field>
         <field name="code">project_coding.sequence</field>

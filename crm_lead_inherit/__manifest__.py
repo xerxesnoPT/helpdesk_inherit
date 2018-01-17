@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "crm lead project coding",
+    'name': "Crm_lead Project Coding",
 
     'summary': """
-    add crm_lead project coding  
+    add Project.No in Crm_lead. when lead convert to sale-order. Project.No will be the name of SO.
     """,
     'description': """
     """,
@@ -17,5 +17,5 @@
     ],
     'currency': 'EUR',
     'price': 0,
-    'images': ['static/description/helpdesk.jpg']
+    'images': ['static/description/SO.jpg']
 }
