@@ -11,7 +11,7 @@
     'website': "http://www.odoo.com.cn",
     'category': 'crm',
     'version': '0.1',
-    'depends': ['crm'],
+    'depends': ['crm','sale_crm'],
     'data': [
         'views/crm_lead.xml',
     ],
