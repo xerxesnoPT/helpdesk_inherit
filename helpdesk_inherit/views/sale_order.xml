@@ -1,0 +1,14 @@
+<odoo>
+    <record model="ir.ui.view" id="view_order_form_inherit">
+        <field name="name">sale order form inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='technical']/../.." position="after">
+                <page string="售后信息" attrs="{'invisible':[('state','not in',['done'])]}">
+            <field name="helpdesk_ids" string='售后工单'/>
+            </page>
+            </xpath>
+            </field>
+    </record>
+</odoo>

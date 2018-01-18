@@ -11,9 +11,10 @@
     'website': "http://www.odoo.com.cn",
     'category': 'helpdesk',
     'version': '0.1',
-    'depends': ['helpdesk'],
+    'depends': ['helpdesk','sale'],
     'data': [
         'views/helpdesk.xml',
+        'views/sale_order.xml',
     ],
     'currency': 'EUR',
     'price': 0,
